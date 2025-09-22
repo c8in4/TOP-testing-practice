@@ -1,4 +1,4 @@
-import { capitalize, reverse, calculator } from "./script";
+import { capitalize, reverse, calculator, caesarCipher } from "./script";
 
 describe("String manipulation", () => {
   it("Capitalize 'test'", () => {
@@ -32,16 +32,20 @@ describe("Calculator", () => {
 });
 
 describe("Caesar cipher", () => {
-  it.skip("'xyz' 3", () => {
+  it("'xyz' 3", () => {
     expect(caesarCipher("xyz", 3)).toBe("abc");
   });
 
-  it.skip("'HeLLo' 3", () => {
+  it("'HeLLo' 3", () => {
     expect(caesarCipher("HeLLo", 3)).toBe("KhOOr");
   });
 
-  it.skip("'Hello World!' 3", () => {
-    expect(1).toBe(1);
+  it("'Hello World!' 3", () => {
+    expect(caesarCipher("Hello, World!", 3)).toBe("Khoor, Zruog!");
+  });
+
+  it("Big key", () => {
+    expect(caesarCipher("abcABC xyzXYZ", 45)).toBe("tuvTUV qrsQRS");
   });
 });
 
