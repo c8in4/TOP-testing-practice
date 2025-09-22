@@ -1,4 +1,10 @@
-import { capitalize, reverse, calculator, caesarCipher } from "./script";
+import {
+  capitalize,
+  reverse,
+  calculator,
+  caesarCipher,
+  analyzeArray,
+} from "./script";
 
 describe("String manipulation", () => {
   it("Capitalize 'test'", () => {
@@ -50,14 +56,14 @@ describe("Caesar cipher", () => {
 });
 
 describe("Analyze Array", () => {
-  const object = [[1, 8, 3, 4, 2, 6]];
+  const object = [1, 8, 3, 4, 2, 6];
   const result = {
     average: 4,
     min: 1,
     max: 8,
     length: 6,
   };
-  it.skip("[1,8,3,4,2,6]", () => {
-    expect(analyzeArray(object)).toBe(result);
+  it("[1,8,3,4,2,6]", () => {
+    expect(analyzeArray(object)).toEqual(result);
   });
 });

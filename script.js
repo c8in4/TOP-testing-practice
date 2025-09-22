@@ -41,3 +41,20 @@ function processCharCode(charCode, key) {
     return newCharCode > 122 ? newCharCode - LENGTH_OF_ALPHABET : newCharCode;
   }
 }
+
+const object = [1, 8, 3, 4, 2, 6];
+const result = {
+  average: 4,
+  min: 1,
+  max: 8,
+  length: 6,
+};
+
+export function analyzeArray(arr) {
+  const sortedArr = arr.sort((a, b) => a - b);
+  const average = arr.reduce((accum, curr) => accum + curr, 0) / arr.length;
+  const min = sortedArr[0];
+  const max = sortedArr[sortedArr.length - 1];
+  const length = arr.length;
+  return { average, min, max, length };
+}
