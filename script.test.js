@@ -1,4 +1,4 @@
-import { capitalize, reverse } from "./script";
+import { capitalize, reverse, calculator } from "./script";
 
 describe("String manipulation", () => {
   it("Capitalize 'test'", () => {
@@ -17,17 +17,17 @@ describe("String manipulation", () => {
 });
 
 describe("Calculator", () => {
-  it.skip("add 2 and 3 to be 5", () => {
-    expect(add(2, 3)).toBe(5);
+  it("add 2 and 3 to be 5", () => {
+    expect(calculator.add(2, 3)).toBe(5);
   });
-  it.skip("subtract 3 and 2 to be 1", () => {
-    expect(subtract(3, 2)).toBe(1);
+  it("subtract 3 and 2 to be 1", () => {
+    expect(calculator.subtract(3, 2)).toBe(1);
   });
-  it.skip("multiply 2 and 3 to be 6", () => {
-    expect(multiply(2, 3)).toBe(6);
+  it("multiply 2 and 3 to be 6", () => {
+    expect(calculator.multiply(2, 3)).toBe(6);
   });
-  it.skip("divide 6 and 3 to be 2", () => {
-    expect(divide(6, 3)).toBe(2);
+  it("divide 6 and 3 to be 2", () => {
+    expect(calculator.divide(6, 3)).toBe(2);
   });
 });
 
